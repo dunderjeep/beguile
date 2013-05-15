@@ -1,9 +1,6 @@
 cards = new Meteor.Collection("Cards");
 
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "Welcome to beguile.";
-  };
 
   Template.hello.events({
     'click input' : function () {
@@ -12,6 +9,10 @@ if (Meteor.isClient) {
         console.log("You pressed the button");
     }
   });
+
+	Template.cards.cards = function() {
+		return cards.find({}, {sort: {Name: 1}});
+	};	
 }
 
 if (Meteor.isServer) {
