@@ -11,16 +11,14 @@
 
 <template name="hello">
   	<a href="http://imgur.com/34d0mDN"><img src="http://i.imgur.com/34d0mDN.png" title="Hosted by imgur.com"/></a>
-  	{{greeting}}
 </template>
 
 <template name="cards">
 <div class="title">Cards</div>
 	<div id="cards">
 		{{#each cards}}
-			<div class="card">
-				{{url}}				
-				<img src="{{url}}" />
+			<div class="card">		
+				<img class="card" src="{{url}}" />
 			</div>
 		{{/each}}
 	</div
