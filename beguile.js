@@ -1,3 +1,5 @@
+cards = new Meteor.Collection("Cards");
+
 if (Meteor.isClient) {
   Template.hello.greeting = function () {
     return "Welcome to beguile.";

@@ -1,13 +1,27 @@
 <head>
-  <title>beguile</title>
+  <title>Beguile</title>
 </head>
 
 <body>
-  {{> hello}}
+  	{{> hello}}
+	<div id="cards-container">
+		{{> cards}}
+	</div>
 </body>
 
 <template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+  	<a href="http://imgur.com/34d0mDN"><img src="http://i.imgur.com/34d0mDN.png" title="Hosted by imgur.com"/></a>
+  	{{greeting}}
+</template>
+
+<template name="cards">
+<div class="title">Cards</div>
+	<div id="cards">
+		{{#each cards}}
+			<div class="card">
+				{{Card}}			
+			</div>
+		{{/each}}
+	</div
+	
 </template>
